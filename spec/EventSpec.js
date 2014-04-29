@@ -106,7 +106,6 @@ describe("Events", function() {
 
   it("Should add a property to the internal events object when on is called", function() {
 
-    console.log(Events);
     dog.on("bark", function(){
       console.log("woof");
     });
@@ -213,8 +212,8 @@ describe("Events", function() {
       bark2 = true;
       console.log("woof2");
     });
-
-
+    console.log('read this')
+    console.log(dog.events.bark)
     dog.trigger("bark");
 
     expect(bark).toBe(true);
